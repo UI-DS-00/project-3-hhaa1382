@@ -9,7 +9,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     private TextView text;
     private TextView answer;
-    private Calculator calculator=new Calculator();
+    private final Calculator calculator=new Calculator();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +44,16 @@ public class MainActivity extends AppCompatActivity {
 
         Button equal=findViewById(R.id.equal_button);
         equal.setOnClickListener(e->{
-            double ans=calculator.getAnswer(String.valueOf(text.getText()));
-            answer.setText(String.valueOf(ans));
+            try {
+                double ans = calculator.getAnswer(String.valueOf(text.getText()));
+                answer.setText(String.valueOf(ans));
+            }
+            catch (IllegalStateException ex){
+                answer.setText(ex.getMessage());
+            }
+            finally {
+                text.setText("");
+            }
         });
 
         Button positiveMinus=findViewById(R.id.positive_minus_button);

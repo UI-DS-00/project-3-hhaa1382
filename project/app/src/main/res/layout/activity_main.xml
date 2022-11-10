@@ -5,7 +5,17 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
+    android:background="@color/red"
     tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculator"
+        android:textSize="40sp"
+        android:textColor="@color/yellow"
+        android:layout_marginBottom="30dp"
+        />
 
     <TextView
         android:layout_width="match_parent"
@@ -13,7 +23,7 @@
         tools:text="123"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:layout_marginTop="20dp"
         android:id="@+id/text_value"
         />
@@ -24,7 +34,7 @@
         tools:text="123"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:layout_marginTop="50dp"
         android:id="@+id/answer"
         />
@@ -35,6 +45,8 @@
         android:text="Clean"
         android:textSize="@dimen/standard_font_size"
         android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@color/black"
         android:layout_marginTop="50dp"
         android:id="@+id/clean_button"
         />
@@ -52,6 +64,8 @@
             android:text="("
             android:textSize="@dimen/standard_font_size"
             android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/black"
             android:id="@+id/open_parenthesis_button"
             />
 
@@ -61,6 +75,8 @@
             android:text=")"
             android:textSize="@dimen/standard_font_size"
             android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/black"
             android:id="@+id/close_parenthesis_button"
             />
 
@@ -70,6 +86,8 @@
             android:text="^"
             android:textSize="@dimen/standard_font_size"
             android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/black"
             android:id="@+id/power_button"
             />
 
@@ -79,6 +97,8 @@
             android:text="+/-"
             android:textSize="@dimen/standard_font_size"
             android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/black"
             android:id="@+id/positive_minus_button"
             />
 
@@ -97,6 +117,8 @@
             android:text="1"
             android:textSize="@dimen/standard_font_size"
             android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/black"
             android:id="@+id/number1_button"
             />
 
@@ -106,6 +128,8 @@
             android:text="2"
             android:textSize="@dimen/standard_font_size"
             android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/black"
             android:id="@+id/number2_button"
             />
 
@@ -115,6 +139,8 @@
             android:text="3"
             android:textSize="@dimen/standard_font_size"
             android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/black"
             android:id="@+id/number3_button"
             />
 
@@ -124,6 +150,8 @@
             android:text="/"
             android:textSize="@dimen/standard_font_size"
             android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/black"
             android:id="@+id/divide_button"
             />
 
@@ -142,6 +170,8 @@
             android:text="4"
             android:textSize="@dimen/standard_font_size"
             android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/black"
             android:id="@+id/number4_button"
             />
 
@@ -151,6 +181,8 @@
             android:text="5"
             android:textSize="@dimen/standard_font_size"
             android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/black"
             android:id="@+id/number5_button"
             />
 
@@ -160,6 +192,8 @@
             android:text="6"
             android:textSize="@dimen/standard_font_size"
             android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/black"
             android:id="@+id/number6_button"
             />
 
@@ -169,6 +203,8 @@
             android:text="*"
             android:textSize="@dimen/standard_font_size"
             android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/black"
             android:id="@+id/multiple_button"
             />
 
@@ -187,6 +223,8 @@
             android:text="7"
             android:textSize="@dimen/standard_font_size"
             android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/black"
             android:id="@+id/number7_button"
             />
 
@@ -196,6 +234,8 @@
             android:text="8"
             android:textSize="@dimen/standard_font_size"
             android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/black"
             android:id="@+id/number8_button"
             />
 
@@ -205,6 +245,8 @@
             android:text="9"
             android:textSize="@dimen/standard_font_size"
             android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/black"
             android:id="@+id/number9_button"
             />
 
@@ -214,6 +256,8 @@
             android:text="-"
             android:textSize="@dimen/standard_font_size"
             android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/black"
             android:id="@+id/minus_button"
             />
 
@@ -232,6 +276,8 @@
             android:text="0"
             android:textSize="@dimen/standard_font_size"
             android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/black"
             android:id="@+id/number0_button"
             />
 
@@ -241,6 +287,8 @@
             android:text="."
             android:textSize="@dimen/standard_font_size"
             android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/black"
             android:id="@+id/dot_button"
             />
 
@@ -250,6 +298,8 @@
             android:text="="
             android:textSize="@dimen/standard_font_size"
             android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/black"
             android:id="@+id/equal_button"
             />
 
@@ -259,6 +309,8 @@
             android:text="+"
             android:textSize="@dimen/standard_font_size"
             android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/black"
             android:id="@+id/plus_button"
             />
 
