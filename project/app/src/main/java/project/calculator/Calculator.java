@@ -101,26 +101,30 @@ public class Calculator {
                 }
 
                 switch (c) {
-                    case '+' -> {
+                    case '+' :
                         hold=number2 + number1;
                         numbers.push(hold);
-                    }
-                    case '-' -> {
+                        break;
+
+                    case '-' :
                         hold=number2 - number1;
                         numbers.push(hold);
-                    }
-                    case '*' -> {
+                        break;
+
+                    case '*' :
                         hold=number2 * number1;
                         numbers.push(hold);
-                    }
-                    case '/' -> {
+                        break;
+
+                    case '/' :
                         hold=number2 / number1;
                         numbers.push(hold);
-                    }
-                    case '^' ->{
+                        break;
+
+                    case '^' :
                         hold=power(number2,number1);
                         numbers.push(hold);
-                    }
+                        break;
                 }
             }
             else{
