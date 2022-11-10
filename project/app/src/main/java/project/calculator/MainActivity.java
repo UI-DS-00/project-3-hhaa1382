@@ -9,11 +9,19 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     private TextView text;
     private TextView answer;
+    private Calculator calculator=new Calculator();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        initializeValues();
+    }
+
+    private void initializeValues(){
+        text=findViewById(R.id.text_value);
+        answer=findViewById(R.id.answer);
 
         setTextValues(findViewById(R.id.number1_button),"1");
         setTextValues(findViewById(R.id.number2_button),"2");
@@ -35,7 +43,24 @@ public class MainActivity extends AppCompatActivity {
         setTextValues(findViewById(R.id.close_parenthesis_button),")");
 
         Button equal=findViewById(R.id.equal_button);
+        equal.setOnClickListener(e->{
+            double ans=calculator.getAnswer(String.valueOf(text.getText()));
+            answer.setText(String.valueOf(ans));
+        });
+
         Button positiveMinus=findViewById(R.id.positive_minus_button);
+        positiveMinus.setOnClickListener(e->{
+            if(checkMinus(String.valueOf(text.getText()))){
+                String temp=String.valueOf(text.getText());
+                text.setText(temp+"-");
+            }
+        });
+
+        Button clean=findViewById(R.id.clean_button);
+        clean.setOnClickListener(e->{
+            text.setText("");
+            answer.setText("");
+        });
     }
 
     private void setTextValues(Button button,String value){
@@ -43,5 +68,9 @@ public class MainActivity extends AppCompatActivity {
             String temp=String.valueOf(text.getText());
             text.setText(temp+value);
         });
+    }
+
+    private boolean checkMinus(String text){
+        return text.length()==0 || text.charAt(text.length()-1)=='(';
     }
 }

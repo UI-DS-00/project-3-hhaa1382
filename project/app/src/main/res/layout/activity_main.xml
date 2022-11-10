@@ -15,7 +15,7 @@
         android:textStyle="bold"
         android:textColor="@color/black"
         android:layout_marginTop="20dp"
-        android:id="@+id/text"
+        android:id="@+id/text_value"
         />
 
     <TextView
