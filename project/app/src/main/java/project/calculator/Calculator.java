@@ -49,7 +49,11 @@ public class Calculator {
         }
 
         while (!operators.isEmpty()){
-            temp.append(operators.pop());
+            char hold=operators.pop();
+            if(hold=='('){
+                throw new IllegalStateException("error");
+            }
+            temp.append(hold);
         }
         return temp.toString();
     }
